@@ -2,3 +2,5 @@ C:\Users\allan.de.castro\Desktop\PowerApps Components\PhoneByCountry\obj\Debug\P
 C:\Users\allan.de.castro\Desktop\PowerApps Components\PhoneByCountry\obj\Debug\PhoneByCountry.pcfproj.CoreCompileInputs.cache
 C:\Users\allan.de.castro\Desktop\PowerAppsComponents\PhoneByCountry\obj\Debug\PhoneByCountry.pcfprojAssemblyReference.cache
 C:\Users\allan.de.castro\Desktop\PowerAppsComponents\PhoneByCountry\obj\Debug\PhoneByCountry.pcfproj.CoreCompileInputs.cache
+C:\Users\allan.de.castro\Documents\GitHub\PhoneNumberByCountry\obj\Debug\PhoneByCountry.pcfprojAssemblyReference.cache
+C:\Users\allan.de.castro\Documents\GitHub\PhoneNumberByCountry\obj\Debug\PhoneByCountry.pcfproj.CoreCompileInputs.cache

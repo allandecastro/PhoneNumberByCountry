@@ -66,11 +66,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\allan.de.castro\\Desktop\\PowerAppsComponents\\PhoneByCountry\\PhoneByCountry.pcfproj",
+      "projectUniqueName": "C:\\Users\\allan.de.castro\\Documents\\GitHub\\PhoneNumberByCountry\\PhoneByCountry.pcfproj",
       "projectName": "PhoneByCountry",
-      "projectPath": "C:\\Users\\allan.de.castro\\Desktop\\PowerAppsComponents\\PhoneByCountry\\PhoneByCountry.pcfproj",
+      "projectPath": "C:\\Users\\allan.de.castro\\Documents\\GitHub\\PhoneNumberByCountry\\PhoneByCountry.pcfproj",
       "packagesPath": "C:\\Users\\allan.de.castro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\allan.de.castro\\Desktop\\PowerAppsComponents\\PhoneByCountry\\obj\\",
+      "outputPath": "C:\\Users\\allan.de.castro\\Documents\\GitHub\\PhoneNumberByCountry\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\allan.de.castro\\AppData\\Roaming\\NuGet\\NuGet.Config",
