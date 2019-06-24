@@ -8,4 +8,4 @@ Use the libphonenumber-js library.
 Support 250+ countries.
 
 # Screenshot
-![alt text](https://i.ibb.co/L0SCLnV/phone.png)
+![alt text](https://github.com/allandecastro/PhoneNumberByCountry/blob/master/screenshot.png?raw=true)
