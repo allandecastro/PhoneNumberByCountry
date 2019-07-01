@@ -28,3 +28,46 @@ Be sure to update your Microsoft PowerApps CLI to the latest version:
 ```bash
 pac install latest
 ```
+# Build the control
+
+* Clone the repo/ download the zip file.
+* Navigate to ./PhoneNumberByCountry/ folder.
+* Copy the folder path and open it in visual studio code.
+* Open the terminal, and run the command the following command to install the project dependencies:
+```bash
+npm install
+```
+Then run the command:
+```bash
+npm run start
+```
+# Build the solution
+
+* Create a new solution folder and open the Developer command prompt.
+* Change the directory to the newly created folder in previous step.
+* Init the future solution:
+```bash
+pac solution init --publisherName someName --customizationPrefix someSolutionPrefix
+``` 
+* Add the control to your future solution:
+```bash
+pac solution add-reference --path provide path of control project folder where the pcf.proj is available
+``` 
+* Build 1/2:
+```bash
+msbuild /t:restore
+``` 
+* Build 2/2:
+```bash
+msbuild
+``` 
+* You will have the solution file in SolutionFolder/bin/debug folder!
+
+If you want to change the solution type you have to edit the .cdsproj file:
+```bash
+Solution Packager overrides, un-comment to use: SolutionPackagerType (Managed, Unmanaged, Both)
+  <PropertyGroup>
+    <SolutionPackageType>Managed</SolutionPackageType>
+  </PropertyGroup>
+
+  ```
