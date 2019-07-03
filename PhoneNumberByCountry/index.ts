@@ -40,7 +40,7 @@ export class PhoneNumberByCountry implements ComponentFramework.StandardControl<
 		this._phoneNumberElement.setAttribute("type", "text");
 		this._phoneNumberElement.setAttribute("class", "pcfinputcontrol");
 		this._phoneNumberElement.addEventListener("change", this._phoneNumberChanged);
-		//onfocusout
+
 		this._phoneNumberTypeElement = document.createElement("img");
 		this._phoneNumberTypeElement.setAttribute("class", "pcfimagecontrol");
 		this._phoneNumberTypeElement.setAttribute("height", "24px");
@@ -50,10 +50,7 @@ export class PhoneNumberByCountry implements ComponentFramework.StandardControl<
 		// @ts-ignore
 		if (Xrm.Page.ui.getFormType() == 3 || Xrm.Page.ui.getFormType() == 4)
 			this._phoneNumberElement.readOnly = true;
-		// @ts-ignore
-		var crmPhoneNumberAttribute = this._context.parameters.PhoneNumber.attributes.LogicalName;
-		// @ts-ignore 
-		var actualPhoneNumber = Xrm.Page.getAttribute(crmPhoneNumberAttribute).getValue();
+		var actualPhoneNumber = this._context.parameters.PhoneNumber.raw;
 		if (actualPhoneNumber != null && actualPhoneNumber.length > 0) {
 			this._phoneNumberElement.value = actualPhoneNumber;
 			this.findAndSetFlag();
@@ -66,9 +63,10 @@ export class PhoneNumberByCountry implements ComponentFramework.StandardControl<
 	public updateView(context: ComponentFramework.Context<IInputs>): void {
 		// Add code to update control view
 		// @ts-ignore
-		var crmPhoneNumberAttribute = this._context.parameters.PhoneNumber.attributes.LogicalName;
+		//var crmPhoneNumberAttribute = this._context.parameters.PhoneNumber.attributes.LogicalName;
+		this._context.parameters.PhoneNumber == undefined ? "": this._context.parameters.PhoneNumber.raw;
 		// @ts-ignore 
-		Xrm.Page.getAttribute(crmPhoneNumberAttribute).setValue(this._context.parameters.PhoneNumber.formatted);
+		//Xrm.Page.getAttribute(crmPhoneNumberAttribute).setValue(this._context.parameters.PhoneNumber.formatted);
 	}
 
 	/** 
