@@ -11,7 +11,8 @@
   "dependencies": {
     "@types/node": "^10.12.18",
     "@types/powerapps-component-framework": "1.1.0",
-    "libphonenumber-js": "^1.7.20"
+    "libphonenumber-js": "^1.7.20",
+    "lodash": "^4.17.15"
   },
   "devDependencies": {
     "pcf-scripts": "^0",
