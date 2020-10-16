@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <manifest>
-  <control namespace="PhoneNumberByCountry" constructor="PhoneNumberByCountry" version="1.0.1" display-name-key="PhoneNumberByCountry" description-key="Display country flag for phone number and format it." control-type="standard" preview-image="img/preview.png" api-version="1.1.0">
+  <control namespace="PhoneNumberByCountry" constructor="PhoneNumberByCountry" version="1.0.3" display-name-key="PhoneNumberByCountry" description-key="Display country flag for phone number and format it." control-type="standard" preview-image="img/preview.png" api-version="1.1.0">
     <property name="PhoneNumber" display-name-key="PhoneNumber" description-key="Phone Number." of-type="SingleLine.Phone" usage="bound" required="true"/>
     <resources>
       <code path="bundle.js" order="1"/>

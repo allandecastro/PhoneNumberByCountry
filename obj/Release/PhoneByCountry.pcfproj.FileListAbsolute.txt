@@ -1,0 +1,2 @@
+C:\Users\allan.de.castro\Documents\GitHub\PhoneNumberByCountry\obj\Release\PhoneByCountry.pcfprojAssemblyReference.cache
+C:\Users\allan.de.castro\Documents\GitHub\PhoneNumberByCountry\obj\Release\PhoneByCountry.pcfproj.CoreCompileInputs.cache
