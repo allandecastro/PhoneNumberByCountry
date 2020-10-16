@@ -48,8 +48,15 @@ export class PhoneNumberByCountry implements ComponentFramework.StandardControl<
 		this._container.appendChild(this._phoneNumberElement);
 		this._container.appendChild(this._phoneNumberTypeElement);
 		// @ts-ignore
-		if (Xrm.Page.ui.getFormType() == 3 || Xrm.Page.ui.getFormType() == 4)
-			this._phoneNumberElement.readOnly = true;
+
+		// If the form is diabled because it is inactive or the user doesn't have access
+		// isControlDisabled is set to true
+		let readOnly = this._context.mode.isControlDisabled;
+		// When a field has FLS enabled, the security property on the attribute parameter is set
+		if (this._context.parameters.PhoneNumber.security) {
+			readOnly = readOnly || !this._context.parameters.PhoneNumber.security.editable;
+		}
+		this._phoneNumberElement.readOnly = readOnly;
 		var actualPhoneNumber = this._context.parameters.PhoneNumber.raw;
 		if (actualPhoneNumber != null && actualPhoneNumber.length > 0) {
 			this._phoneNumberElement.value = actualPhoneNumber;
@@ -62,11 +69,8 @@ export class PhoneNumberByCountry implements ComponentFramework.StandardControl<
 	 */
 	public updateView(context: ComponentFramework.Context<IInputs>): void {
 		// Add code to update control view
-		// @ts-ignore
-		//var crmPhoneNumberAttribute = this._context.parameters.PhoneNumber.attributes.LogicalName;
-		this._context.parameters.PhoneNumber == undefined ? "": this._context.parameters.PhoneNumber.raw;
-		// @ts-ignore 
-		//Xrm.Page.getAttribute(crmPhoneNumberAttribute).setValue(this._context.parameters.PhoneNumber.formatted);
+		this._context.parameters.PhoneNumber == undefined ? "" : this._context.parameters.PhoneNumber.raw;
+
 	}
 
 	/** 
@@ -100,7 +104,7 @@ export class PhoneNumberByCountry implements ComponentFramework.StandardControl<
 			});
 	}
 	/**
- 	* Called when a change is detected in the phone number input
+	  * Called when a change is detected in the phone number input
 	* @param filetype Name of the image extension
 	* @param fileContent Base64 image content
 	*/
